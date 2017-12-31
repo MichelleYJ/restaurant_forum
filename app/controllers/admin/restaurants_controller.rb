@@ -19,11 +19,11 @@ class Admin::RestaurantsController < ApplicationController
       flash.now[:alert] = "restaurant was failed to create"
       render :new
     end
+  end
 
-    private
+  private
 
-    def restaurant_params
-      params.require(:restaurant).permit(:name, :opening_hours, :tel, :address, :description)
-    end
-
+  def restaurant_params
+    params.require(:restaurant).permit(:name, :opening_hours, :tel, :address, :description)
+  end
 end
