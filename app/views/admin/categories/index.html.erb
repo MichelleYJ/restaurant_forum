@@ -14,9 +14,14 @@
       <div class="form-group">
         <%= f.text_field :name, placeholder: "Category Name",  class: "form-control" %>
       </div>
+      
       <%= f.submit class: "btn btn-primary" %>
-    <% end %>
-  </div>
+
+        <% if @category.errors.any? %>
+          <%= @category.errors.full_messages.to_sentence %>
+        <% end %>
+      <% end %>
+  </div>  
 
   <br>
 
